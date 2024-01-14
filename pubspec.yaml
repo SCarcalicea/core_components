@@ -1,7 +1,8 @@
 name: fire_core_components
-description: A starting point for Dart libraries or applications.
+description: A simple way of managing multiple screen sizes
 version: 1.0.0
-# repository: https://github.com/my_org/my_repo
+repository: https://github.com/SCarcalicea/core_components
+issue_tracker: https://github.com/SCarcalicea/core_components/issues
 
 environment:
   sdk: ^3.2.3
