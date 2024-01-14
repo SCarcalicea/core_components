@@ -1,5 +1,6 @@
-import 'package:core_components/navigation/large_medium_screen.dart';
-import 'package:core_components/navigation/small_screen.dart';
+import 'package:core_components/navigation/destination_usecase/destination_configuration.dart';
+import 'package:core_components/navigation/screen_adaptor/large_medium_screen.dart';
+import 'package:core_components/navigation/screen_adaptor/small_screen.dart';
 import 'package:flutter/material.dart';
 
 class NavigationController extends StatefulWidget {
@@ -12,9 +13,8 @@ class NavigationController extends StatefulWidget {
 
 class _NavigationControllerState extends State<NavigationController> {
 
-  LargeMediumScreen largeOrMediumScreen = LargeMediumScreen();
-  SmallScreenNavigation smallScreen = SmallScreenNavigation();
-
+  LargeMediumScreen largeOrMediumScreen = const LargeMediumScreen(destinations: destinationsSample);
+  SmallScreenNavigation smallScreen = const SmallScreenNavigation(destinations: destinationsSample);
 
   @override
   Widget build(BuildContext context) {
