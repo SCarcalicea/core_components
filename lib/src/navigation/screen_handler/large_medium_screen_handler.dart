@@ -4,7 +4,6 @@ import '../model/page_destination_model.dart';
 import '../state/page_content_builder_interface.dart';
 
 class LargeMediumScreenHandler extends StatefulWidget {
-
   /// List of PageDestinationModel for the bottom icons
   final List<PageDestinationModel> destinations;
 
@@ -15,15 +14,16 @@ class LargeMediumScreenHandler extends StatefulWidget {
   final PageContentBuilderInterface contentBuilderNoListen;
 
   /// Requires a list of PageDestinationModel and handlers for widget selection and switching.
-  const LargeMediumScreenHandler({
-    Key? key,
-    required this.destinations,
-    required this.contentBuilderListener,
-    required this.contentBuilderNoListen})
+  const LargeMediumScreenHandler(
+      {Key? key,
+      required this.destinations,
+      required this.contentBuilderListener,
+      required this.contentBuilderNoListen})
       : super(key: key);
 
   @override
-  State<LargeMediumScreenHandler> createState() => _LargeMediumScreenHandlerState();
+  State<LargeMediumScreenHandler> createState() =>
+      _LargeMediumScreenHandlerState();
 }
 
 class _LargeMediumScreenHandlerState extends State<LargeMediumScreenHandler> {
@@ -62,8 +62,9 @@ class _LargeMediumScreenHandlerState extends State<LargeMediumScreenHandler> {
       ).toList(),
       selectedIndex: widget.contentBuilderListener.selectedIndex,
       useIndicator: true,
-      onDestinationSelected: (selectedScreenIndex) =>
-          widget.contentBuilderNoListen.handleScreenChanged(selectedScreenIndex),
+      onDestinationSelected: (selectedScreenIndex) => widget
+          .contentBuilderNoListen
+          .handleScreenChanged(selectedScreenIndex),
     );
   }
 }
