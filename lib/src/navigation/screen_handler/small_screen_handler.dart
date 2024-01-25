@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../../../fire_core_components.dart';
 
-class SmallScreenNavigation extends StatefulWidget {
+class SmallScreenHandler extends StatefulWidget {
   final List<PageDestinationModel> destinations;
 
   /// Handler for selected index and widget mapping
@@ -12,7 +12,7 @@ class SmallScreenNavigation extends StatefulWidget {
   final PageContentBuilderInterface contentBuilderNoListen;
 
   /// Requires a list of PageDestinationModel and handlers for widget selection and switching.
-  const SmallScreenNavigation({
+  const SmallScreenHandler({
     Key? key,
     required this.destinations,
     required this.contentBuilderListener,
@@ -20,10 +20,10 @@ class SmallScreenNavigation extends StatefulWidget {
       : super(key: key);
 
   @override
-  State<SmallScreenNavigation> createState() => _SmallScreenNavigationState();
+  State<SmallScreenHandler> createState() => _SmallScreenHandlerState();
 }
 
-class _SmallScreenNavigationState extends State<SmallScreenNavigation> {
+class _SmallScreenHandlerState extends State<SmallScreenHandler> {
   final GlobalKey<ScaffoldState> scaffoldKey = GlobalKey<ScaffoldState>();
 
   @override

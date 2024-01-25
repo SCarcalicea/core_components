@@ -6,7 +6,7 @@ import '../state/page_content_builder_interface.dart';
 // Handler for large and medium screen size
 // If width is bigger than 800 then the rail will be extended
 // Large and medium screen have rail menu item
-class LargeMediumScreen extends StatefulWidget {
+class LargeMediumScreenHandler extends StatefulWidget {
 
   // List of PageDestinationModel for the bottom icons
   final List<PageDestinationModel> destinations;
@@ -17,7 +17,7 @@ class LargeMediumScreen extends StatefulWidget {
   //
   final PageContentBuilderInterface contentBuilderNoListen;
 
-  const LargeMediumScreen({
+  const LargeMediumScreenHandler({
     Key? key,
     required this.destinations,
     required this.contentBuilderListener,
@@ -25,10 +25,10 @@ class LargeMediumScreen extends StatefulWidget {
       : super(key: key);
 
   @override
-  State<LargeMediumScreen> createState() => _LargeMediumScreenState();
+  State<LargeMediumScreenHandler> createState() => _LargeMediumScreenHandlerState();
 }
 
-class _LargeMediumScreenState extends State<LargeMediumScreen> {
+class _LargeMediumScreenHandlerState extends State<LargeMediumScreenHandler> {
   final GlobalKey<ScaffoldState> scaffoldKey = GlobalKey<ScaffoldState>();
 
   @override

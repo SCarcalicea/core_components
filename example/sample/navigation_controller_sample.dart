@@ -1,4 +1,5 @@
-import 'package:fire_core_components/fire_core_components.dart';
+import 'package:fire_core_components/src/navigation/screen_handler/large_medium_screen_handler.dart';
+import 'package:fire_core_components/src/navigation/screen_handler/small_screen_handler.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -18,12 +19,12 @@ class _NavigationControllerSampleState extends State<NavigationControllerSample>
   @override
   Widget build(BuildContext context) {
 
-    LargeMediumScreen largeOrMediumScreen = LargeMediumScreen(
+    LargeMediumScreenHandler largeOrMediumScreen = LargeMediumScreenHandler(
         destinations: destinationsSample,
         contentBuilderListener: Provider.of<PageContentBuilderImpl>(context),
         contentBuilderNoListen: Provider.of<PageContentBuilderImpl>(context));
 
-    SmallScreenNavigation smallScreen = SmallScreenNavigation(
+    SmallScreenHandler smallScreen = SmallScreenHandler(
         destinations: destinationsSample,
         contentBuilderListener: Provider.of<PageContentBuilderImpl>(context),
         contentBuilderNoListen: Provider.of<PageContentBuilderImpl>(context));
