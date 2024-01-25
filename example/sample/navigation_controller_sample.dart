@@ -22,6 +22,7 @@ class _NavigationControllerSampleState extends State<NavigationControllerSample>
         destinations: destinationsSample,
         contentBuilderListener: Provider.of<PageContentBuilderImpl>(context),
         contentBuilderNoListen: Provider.of<PageContentBuilderImpl>(context));
+
     SmallScreenNavigation smallScreen = SmallScreenNavigation(
         destinations: destinationsSample,
         contentBuilderListener: Provider.of<PageContentBuilderImpl>(context),

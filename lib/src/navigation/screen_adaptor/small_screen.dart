@@ -4,9 +4,14 @@ import '../../../fire_core_components.dart';
 
 class SmallScreenNavigation extends StatefulWidget {
   final List<PageDestinationModel> destinations;
+
+  /// Handler for selected index and widget mapping
   final PageContentBuilderInterface contentBuilderListener;
+
+  /// Handler for the widget loading
   final PageContentBuilderInterface contentBuilderNoListen;
 
+  /// Requires a list of PageDestinationModel and handlers for widget selection and switching.
   const SmallScreenNavigation({
     Key? key,
     required this.destinations,
