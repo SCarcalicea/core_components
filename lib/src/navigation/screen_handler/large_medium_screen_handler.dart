@@ -3,20 +3,18 @@ import 'package:flutter/material.dart';
 import '../model/page_destination_model.dart';
 import '../state/page_content_builder_interface.dart';
 
-// Handler for large and medium screen size
-// If width is bigger than 800 then the rail will be extended
-// Large and medium screen have rail menu item
 class LargeMediumScreenHandler extends StatefulWidget {
 
-  // List of PageDestinationModel for the bottom icons
+  /// List of PageDestinationModel for the bottom icons
   final List<PageDestinationModel> destinations;
 
-  // It listens for any changes and notifies all listeners
+  /// Handler for selected index and widget mapping
   final PageContentBuilderInterface contentBuilderListener;
 
-  //
+  /// Handler for the widget loading
   final PageContentBuilderInterface contentBuilderNoListen;
 
+  /// Requires a list of PageDestinationModel and handlers for widget selection and switching.
   const LargeMediumScreenHandler({
     Key? key,
     required this.destinations,

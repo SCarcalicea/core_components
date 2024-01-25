@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 import '../../../fire_core_components.dart';
 
 class SmallScreenHandler extends StatefulWidget {
+
+  /// List of PageDestinationModel for the bottom icons
   final List<PageDestinationModel> destinations;
 
   /// Handler for selected index and widget mapping
