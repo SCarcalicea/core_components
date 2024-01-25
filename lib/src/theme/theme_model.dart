@@ -2,14 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class ThemeModel extends ChangeNotifier {
-
   ThemeData _currentTheme = lightTheme();
 
   ThemeData get currentTheme => _currentTheme;
 
   void toggleTheme() {
     _currentTheme =
-    (_currentTheme == lightTheme()) ? darkTheme() : lightTheme();
+        (_currentTheme == lightTheme()) ? darkTheme() : lightTheme();
     notifyListeners();
   }
 
@@ -20,38 +19,34 @@ class ThemeModel extends ChangeNotifier {
     return ThemeData(
         colorScheme: commonColorScheme(false),
         useMaterial3: true,
-        textTheme: commonTextTheme()
-    );
+        textTheme: commonTextTheme());
   }
 
   static ThemeData darkTheme() {
     return ThemeData(
         colorScheme: commonColorScheme(true),
         useMaterial3: true,
-        textTheme: commonTextTheme()
-    );
+        textTheme: commonTextTheme());
   }
 
   static ColorScheme commonColorScheme(bool isDarkTheme) {
     return ColorScheme.fromSeed(
         seedColor: seedColor,
-        brightness: isDarkTheme ? Brightness.dark : Brightness.light
-    );
+        brightness: isDarkTheme ? Brightness.dark : Brightness.light);
   }
 
   static TextTheme commonTextTheme() {
     return TextTheme(
-      // Large/Medium screen size
-      displayLarge: GoogleFonts.sourceCodePro(),
-      titleLarge: GoogleFonts.sourceCodePro(),
-      bodyLarge: GoogleFonts.sourceCodePro(),
-      // Small screen size
-      displaySmall: GoogleFonts.sourceCodePro(),
-      titleSmall: GoogleFonts.sourceCodePro(),
-      bodySmall: GoogleFonts.sourceCodePro(),
-      // Labels for widgets
-      labelSmall: GoogleFonts.sourceCodePro(),
-      labelLarge: GoogleFonts.sourceCodePro()
-    );
+        // Large/Medium screen size
+        displayLarge: GoogleFonts.sourceCodePro(),
+        titleLarge: GoogleFonts.sourceCodePro(),
+        bodyLarge: GoogleFonts.sourceCodePro(),
+        // Small screen size
+        displaySmall: GoogleFonts.sourceCodePro(),
+        titleSmall: GoogleFonts.sourceCodePro(),
+        bodySmall: GoogleFonts.sourceCodePro(),
+        // Labels for widgets
+        labelSmall: GoogleFonts.sourceCodePro(),
+        labelLarge: GoogleFonts.sourceCodePro());
   }
 }
