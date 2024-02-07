@@ -6,7 +6,7 @@ import 'sample/navigation_controller_sample.dart';
 import 'sample/page_content_builder_impl.dart';
 
 
-void main() {
+Future<void> main() async {
   runApp(
       MultiProvider(
           providers: [
@@ -25,9 +25,8 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-        title: 'Flutter Demo',
+        title: 'FIRE Core Components',
         theme: Provider.of<ThemeModel>(context).currentTheme,
-        // home: const PresentationPage(title: 'Flutter Demo Home Page'),
         home: const SafeArea(child: NavigationControllerSample())
     );
   }

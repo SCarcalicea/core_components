@@ -38,7 +38,10 @@ class ThemeModel extends ChangeNotifier {
   static TextTheme commonTextTheme() {
     return TextTheme(
         // Large/Medium screen size
-        displayLarge: GoogleFonts.sourceCodePro(),
+        displayLarge: GoogleFonts.sourceCodePro(
+          fontSize: 20,
+          fontWeight: FontWeight.bold
+        ),
         titleLarge: GoogleFonts.sourceCodePro(),
         bodyLarge: GoogleFonts.sourceCodePro(),
         // Small screen size

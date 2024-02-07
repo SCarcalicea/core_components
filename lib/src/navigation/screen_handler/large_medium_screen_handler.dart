@@ -15,11 +15,10 @@ class LargeMediumScreenHandler extends StatefulWidget {
 
   /// Requires a list of PageDestinationModel and handlers for widget selection and switching.
   const LargeMediumScreenHandler(
-      {Key? key,
+      {super.key,
       required this.destinations,
       required this.contentBuilderListener,
-      required this.contentBuilderNoListen})
-      : super(key: key);
+      required this.contentBuilderNoListen});
 
   @override
   State<LargeMediumScreenHandler> createState() =>
@@ -41,7 +40,7 @@ class _LargeMediumScreenHandlerState extends State<LargeMediumScreenHandler> {
                 child: buildNavigationRail(context),
               ),
               const VerticalDivider(thickness: 1, width: 1),
-              widget.contentBuilderListener.selectedWidget,
+              Expanded(child: widget.contentBuilderListener.selectedWidget),
             ],
           ),
         ));

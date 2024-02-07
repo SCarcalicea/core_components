@@ -1,6 +1,6 @@
 name: fire_core_components
 description: A simple way of managing multiple screen sizes, you just need to provide a PageContentBuilder implementation and a list of PageDestinationModel
-version: 1.0.2
+version: 1.0.3
 repository: https://github.com/SCarcalicea/core_components
 issue_tracker: https://github.com/SCarcalicea/core_components/issues
 
@@ -12,6 +12,9 @@ dependencies:
   flutter:
     sdk: flutter
   provider: ^6.1.1
+  firebase_core: ^2.15.0
+  firebase_auth: ^4.7.3
+  firebase_ui_auth: ^1.6.4
 
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
@@ -19,7 +22,7 @@ dependencies:
   google_fonts: ^6.1.0
 
 dev_dependencies:
-  lints: ^2.1.0
+  lints: ^3.0.0
   test: ^1.24.0
 
 

@@ -17,17 +17,17 @@ class PageContentBuilderImpl extends PageContentBuilderInterface {
   void handleScreenChanged(int selectedScreen) {
     switch (selectedScreen) {
       case 0:
-        selectedWidget = const Investments();
+        selectedWidget = Investments();
         case 1:
-          selectedWidget =  const Expenses();
+          selectedWidget =  Expenses();
         case 2:
-          selectedWidget =  const Dashboard();
+          selectedWidget =  Dashboard();
         case 3:
-          selectedWidget =  const NetWorth();
+          selectedWidget =  NetWorth();
         case 4:
-          selectedWidget =  const Debts();
+          selectedWidget =  Debts();
         default:
-          selectedWidget =  const Dashboard();
+          selectedWidget =  Dashboard();
       }
 
       selectedIndex = selectedScreen;
