@@ -10,7 +10,7 @@ class ThemeSwitcher {
           const Text('Dark Mode'),
           Switch(
             value: Provider.of<ThemeModel>(context).currentTheme ==
-                ThemeData.dark(),
+                ThemeModel.darkTheme(),
             onChanged: (value) {
               Provider.of<ThemeModel>(context, listen: false).toggleTheme();
             },

@@ -1,4 +1,5 @@
 import 'package:fire_core_components/src/theme/theme_model.dart';
+import 'package:fire_core_components/src/theme/theme_switcher.dart';
 import 'package:fire_core_components/src/widgets/common/app_bar.dart';
 import 'package:fire_core_components/src/widgets/common/app_bar_model.dart';
 import 'package:flutter/material.dart';
@@ -16,6 +17,7 @@ class Dashboard extends StatefulWidget {
 class _Dashboard extends State<Dashboard> {
 
   bool changeAppBar = false;
+  ThemeSwitcher themeSwitcher = ThemeSwitcher();
 
   @override
   Widget build(BuildContext context) {
@@ -30,7 +32,8 @@ class _Dashboard extends State<Dashboard> {
                   onChanged: (value) => setState(() {
                     changeAppBar = value;
                   })
-              )
+              ),
+              themeSwitcher.switchTheme(context)
             ],
           )
       )
