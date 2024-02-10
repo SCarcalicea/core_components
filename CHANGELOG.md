@@ -13,3 +13,7 @@
 ## 1.0.3
 
 - Adding a generic AppBar Factory and a model for it. See example, dashboard.dart, for more details.
+
+## 1.0.4
+
+- Adding generic components for the Dashboard screen

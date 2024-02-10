@@ -5,17 +5,20 @@ import 'package:provider/provider.dart';
 class ThemeSwitcher {
   Widget switchTheme(BuildContext context) {
     return Card(
-      child: Column(
-        children: [
-          const Text('Dark Mode'),
-          Switch(
-            value: Provider.of<ThemeModel>(context).currentTheme ==
-                ThemeModel.darkTheme(),
-            onChanged: (value) {
-              Provider.of<ThemeModel>(context, listen: false).toggleTheme();
-            },
-          ),
-        ],
+      child: Container(
+        padding: EdgeInsets.all(20),
+        child: Row(
+          children: [
+            const Text('Dark Mode'),
+            Switch(
+              value: Provider.of<ThemeModel>(context).currentTheme ==
+                  ThemeModel.darkTheme(),
+              onChanged: (value) {
+                Provider.of<ThemeModel>(context, listen: false).toggleTheme();
+              },
+            ),
+          ],
+        ),
       ),
     );
   }
