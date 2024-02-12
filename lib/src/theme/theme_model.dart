@@ -39,9 +39,7 @@ class ThemeModel extends ChangeNotifier {
     return TextTheme(
         // Large/Medium screen size
         displayLarge: GoogleFonts.sourceCodePro(
-          fontSize: 20,
-          fontWeight: FontWeight.bold
-        ),
+            fontSize: 20, fontWeight: FontWeight.bold),
         titleLarge: GoogleFonts.sourceCodePro(),
         bodyLarge: GoogleFonts.sourceCodePro(),
         // Small screen size
