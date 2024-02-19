@@ -9,8 +9,8 @@ import 'screens/net_worth.dart';
 class PageContentBuilderImpl extends PageContentBuilderInterface {
 
   PageContentBuilderImpl() {
-    selectedIndex = 2;
-    selectedWidget = Dashboard();
+    selectedIndex = 1;
+    selectedWidget = Expenses();
   }
 
   @override

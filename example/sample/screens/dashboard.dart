@@ -1,23 +1,19 @@
-import 'package:fire_core_components/src/theme/theme_model.dart';
+import 'package:fire_core_components/fire_core_components.dart';
 import 'package:fire_core_components/src/theme/theme_switcher.dart';
 import 'package:fire_core_components/src/widgets/common/app_bar.dart';
-import 'package:fire_core_components/src/widgets/common/app_bar_model.dart';
-import 'package:fire_core_components/src/widgets/common/progress_indicator.dart';
-import 'package:fire_core_components/src/widgets/dashboard/category_summary.dart';
-import 'package:fire_core_components/src/widgets/dashboard/summary.dart';
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
+
+import '../common/app_bar_builder.dart';
 
 class Dashboard extends StatefulWidget {
   Dashboard({super.key});
-
-  final AppBarFactory appBarFactory = AppBarFactory();
 
   @override
   State<Dashboard> createState() => _Dashboard();
 }
 
 class _Dashboard extends State<Dashboard> {
+
   bool changeAppBar = false;
   ThemeSwitcher themeSwitcher = ThemeSwitcher();
   Summary summary = Summary(
@@ -27,6 +23,8 @@ class _Dashboard extends State<Dashboard> {
       fireAmount: 1000000.0,
       netWorth: 1000.0,
       currency: "\$");
+  final AppBarBuilder appBarBuilder = AppBarBuilder();
+  final AppBarFactory appBarFactory = AppBarFactory();
 
   FireProgressIndicator progressIndicator = FireProgressIndicator(
       textStyle: TextStyle(fontWeight: FontWeight.bold, fontSize: 20));
@@ -34,7 +32,7 @@ class _Dashboard extends State<Dashboard> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: switchAppBar(),
+        appBar: appBarFactory.genericAppBar(appBarBuilder.build(context, changeAppBar)),
         body: Container(
           child: Center(
               child: SingleChildScrollView(
@@ -123,51 +121,5 @@ class _Dashboard extends State<Dashboard> {
             ),
           )),
         ));
-  }
-
-  AppBar switchAppBar() {
-    AppBarModel appBarModel1 = AppBarModel.of(
-        actions: [IconButton(icon: Icon(Icons.person), onPressed: () {})],
-        context: context,
-        title: Text("Main AppBar 1",
-            style: Provider.of<ThemeModel>(context)
-                .currentTheme
-                .textTheme
-                .displayLarge),
-        profileTitle: "Sample profile title",
-        gradientColors: <Color>[
-          Colors.blueAccent,
-          Colors.blueAccent,
-          Colors.blueAccent,
-          Colors.blueAccent
-        ],
-        gradientProportions: const [0.1, 0.4, 0.6, 0.9]);
-
-    AppBarModel appBarModel2 = AppBarModel.of(
-        context: context,
-        title: Text("Main AppBar 2",
-            style: Provider.of<ThemeModel>(context)
-                .currentTheme
-                .textTheme
-                .displayLarge),
-        profileTitle: "Sample profile title",
-        gradientColors: <Color>[
-          Colors.black,
-          Colors.deepPurple,
-          Colors.deepPurpleAccent,
-          Colors.deepPurple.shade200
-        ],
-        gradientProportions: const [
-          0.1,
-          0.4,
-          0.6,
-          0.9
-        ]);
-
-    if (changeAppBar) {
-      return widget.appBarFactory.genericAppBar(appBarModel1);
-    } else {
-      return widget.appBarFactory.genericAppBar(appBarModel2);
-    }
   }
 }

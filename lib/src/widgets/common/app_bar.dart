@@ -21,6 +21,7 @@ class AppBarFactory {
       toolbarHeight: model.height,
       actions: model.actions,
       automaticallyImplyLeading: false,
+      bottom: model.bottomButtons,
     );
   }
 }

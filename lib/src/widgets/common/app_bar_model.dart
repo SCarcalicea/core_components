@@ -9,7 +9,9 @@ class AppBarModel {
   final List<Color> gradientColors;
   final ShapeBorder? shapeBorder;
   final List<Widget>? actions;
-  final double? height;
+  final double height;
+  final double margin;
+  final PreferredSizeWidget? bottomButtons;
 
   /// Builds a model for the AppBarFactory
   ///
@@ -18,6 +20,8 @@ class AppBarModel {
     this.shapeBorder,
     this.actions,
     this.height = 75,
+    this.margin = 10,
+    this.bottomButtons,
     required this.context,
     required this.title,
     required this.profileTitle,
