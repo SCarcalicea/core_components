@@ -1,6 +1,6 @@
 import 'package:fire_core_components/src/widgets/common/buttons/filter_by_period.dart';
 import 'package:fire_core_components/src/widgets/common/progress_indicator/indicator.dart';
-import 'package:fire_core_components/src/widgets/common/non_scrollabe_list_view.dart';
+import 'package:fire_core_components/src/widgets/common/non_scrollable_list_view.dart';
 import 'package:fire_core_components/src/widgets/common/scrollable_scaffold.dart';
 import 'package:fire_core_components/src/widgets/common/progress_indicator/secondary_progress_indicator.dart';
 import 'package:fire_core_components/src/widgets/common/top_pie_chart.dart';
