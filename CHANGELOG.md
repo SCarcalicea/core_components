@@ -17,3 +17,8 @@
 ## 1.0.4
 
 - Adding generic components for the Dashboard screen
+
+## 1.0.5
+
+- Added support for scrollable content using draggable_home widget
+- Implemented all required components for expenses and investments
