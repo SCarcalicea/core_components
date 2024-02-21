@@ -1,9 +1,12 @@
-import 'package:fire_core_components/src/widgets/common/filter_by_period.dart';
-import 'package:fire_core_components/src/widgets/common/indicator.dart';
+import 'package:fire_core_components/src/widgets/common/buttons/filter_by_period.dart';
+import 'package:fire_core_components/src/widgets/common/progress_indicator/indicator.dart';
+import 'package:fire_core_components/src/widgets/common/non_scrollabe_list_view.dart';
 import 'package:fire_core_components/src/widgets/common/scrollable_scaffold.dart';
-import 'package:fire_core_components/src/widgets/common/secondary_progress_indicator.dart';
+import 'package:fire_core_components/src/widgets/common/progress_indicator/secondary_progress_indicator.dart';
 import 'package:fire_core_components/src/widgets/common/top_pie_chart.dart';
+import 'package:fire_core_components/src/widgets/income_expenses/list/expense_model.dart';
 import 'package:fire_core_components/src/widgets/income_expenses/top_summary.dart';
+import 'package:fire_core_components/src/widgets/investments/list/investment_model.dart';
 import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/material.dart';
 
@@ -67,38 +70,65 @@ class _Expenses extends State<Expenses> {
                       Indicator(color: Colors.red, text: "TEST", isSquare: false),
                     ],
                   ),
-                  SecondaryProgressIndicator(
-                      description: Text("Needs   "),
-                      percentage: Text("13%"),
-                      percentageValue: 0.13,
-                      color: Colors.green),
-                  SecondaryProgressIndicator(
-                      description: Text("Wants   "),
-                      percentage: Text("67%"),
-                      percentageValue: 0.67,
-                      color: Colors.blue),
-                  SecondaryProgressIndicator(
-                      description: Text("Savings"),
-                      percentage: Text("20%"),
-                      percentageValue: 0.20,
-                      color: Colors.red)
-                ])))
+                  Padding(
+                    padding: EdgeInsets.only(right: 20, left: 20),
+                    child: Column(
+                      children: [
+                        SecondaryProgressIndicator(
+                            description: Text("Needs   "),
+                            percentage: Text("13%"),
+                            percentageValue: 0.13,
+                            color: Colors.green),
+                        SecondaryProgressIndicator(
+                            description: Text("Wants   "),
+                            percentage: Text("67%"),
+                            percentageValue: 0.67,
+                            color: Colors.blue),
+                        SecondaryProgressIndicator(
+                            description: Text("Savings"),
+                            percentage: Text("20%"),
+                            percentageValue: 0.20,
+                            color: Colors.red),
+                      ],
+                    ),
+                  ),
+                  NonScrollableListView(
+                    modelType: ExpenseModel.type,
+                    expenseModels: buildExpenseModel(),
+                    investmentModels: buildInvestmentModel(),
+                  )
+                ]
+                )
+            )
+        )
       ],
     );
   }
+}
 
-  Widget headerWidget(BuildContext context) {
-    return Container(
-      color: Theme.of(context).primaryColor,
-      child: Center(
-        child: Text(
-          "Expenses",
-          style: Theme.of(context)
-              .textTheme
-              .displayMedium!
-              .copyWith(color: Colors.white70),
-        ),
-      ),
-    );
+List<ExpenseModel> buildExpenseModel() {
+  List<ExpenseModel> expenseModel = [];
+
+  for (int i = 0; i < 5; i++) {
+    expenseModel.add(ExpenseModel(
+        isExpense: i / 2 == 0,
+        itemDetails: "Saving test",
+        itemDate: DateUtils.dateOnly(DateTime.now()).toString(),
+        itemValue: "-1.05k \$"));
   }
+
+  return expenseModel;
+}
+
+List<InvestmentModel> buildInvestmentModel() {
+  List<InvestmentModel> investmentModel = [];
+
+  for (int i = 0; i < 5; i++) {
+    investmentModel.add(InvestmentModel(
+        itemTitle: "Binance",
+        itemDetailsLine1: "Initial value: 1.24k \$",
+        itemDetailsLine2: "Current value: 1.24k \$"));
+  }
+
+  return investmentModel;
 }

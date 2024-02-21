@@ -1,4 +1,4 @@
-import 'package:fire_core_components/src/widgets/common/filter_by_period.dart';
+import 'package:fire_core_components/src/widgets/common/buttons/filter_by_period.dart';
 import 'package:fire_core_components/src/widgets/common/scrollable_scaffold.dart';
 import 'package:fire_core_components/src/widgets/income_expenses/top_summary.dart';
 import 'package:flutter/material.dart';

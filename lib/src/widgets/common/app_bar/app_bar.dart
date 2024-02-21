@@ -1,4 +1,4 @@
-import 'package:fire_core_components/src/widgets/common/app_bar_model.dart';
+import 'package:fire_core_components/src/widgets/common/app_bar/app_bar_model.dart';
 import 'package:flutter/material.dart';
 
 @Deprecated('Use ScrollableScaffold instead')

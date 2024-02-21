@@ -1,4 +1,4 @@
-import 'package:fire_core_components/src/widgets/common/rounded_rectangular_button.dart';
+import 'package:fire_core_components/src/widgets/common/buttons/rounded_rectangular_button.dart';
 import 'package:flutter/material.dart';
 
 class FilterByPeriod extends StatelessWidget {
