@@ -18,6 +18,7 @@ class ThemeModel extends ChangeNotifier {
   static ThemeData lightTheme() {
     return ThemeData(
         colorScheme: commonColorScheme(false),
+        primaryColor: Color(0xff2457C5),
         useMaterial3: true,
         textTheme: commonTextTheme());
   }
@@ -25,6 +26,7 @@ class ThemeModel extends ChangeNotifier {
   static ThemeData darkTheme() {
     return ThemeData(
         colorScheme: commonColorScheme(true),
+        primaryColor: Colors.deepPurple,
         useMaterial3: true,
         textTheme: commonTextTheme());
   }

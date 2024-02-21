@@ -3,16 +3,16 @@ import 'package:fire_core_components/src/theme/theme_model.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
+@Deprecated('Use ScrollableScaffold instead')
 class AppBarBuilder {
-
   AppBarModel build(BuildContext context, bool noGradient) {
     AppBarModel noGradientAppBar = AppBarModel.of(
         actions: [IconButton(icon: Icon(Icons.person), onPressed: () {})],
         shapeBorder: const RoundedRectangleBorder(
-            borderRadius: BorderRadius.all(Radius.circular(70))
-        ),
+            borderRadius: BorderRadius.all(Radius.circular(70))),
         bottomButtons: PreferredSize(
-          preferredSize: const Size.fromHeight(80), // Adjust the height of the bottom buttons and gap
+          preferredSize: const Size.fromHeight(
+              80), // Adjust the height of the bottom buttons and gap
           child: Column(
             children: [
               const SizedBox(height: 30),
@@ -69,7 +69,8 @@ class AppBarBuilder {
 
     AppBarModel gradientAppBar = AppBarModel.of(
         bottomButtons: PreferredSize(
-          preferredSize: const Size.fromHeight(40), // Adjust the height of the bottom buttons and gap
+          preferredSize: const Size.fromHeight(
+              40), // Adjust the height of the bottom buttons and gap
           child: Column(
             children: [
               Row(
@@ -116,10 +117,10 @@ class AppBarBuilder {
                 .displayLarge),
         profileTitle: "Sample profile title",
         gradientColors: <Color>[
-          Colors.black,
-          Colors.deepPurple,
+          Colors.deepPurple.shade200,
           Colors.deepPurpleAccent,
-          Colors.deepPurple.shade200
+          Colors.deepPurple,
+          Colors.black,
         ],
         gradientProportions: const [
           0.1,

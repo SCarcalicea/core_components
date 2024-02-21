@@ -13,21 +13,26 @@ Future<void> main() async {
             ChangeNotifierProvider(create: (context) => ThemeModel()),
             ChangeNotifierProvider(create: (context) => PageContentBuilderImpl())
           ],
-          builder: ((context, child) => const MyApp())
+          builder: ((context, child) => MyApp())
       )
   );
 }
 
-class MyApp extends StatelessWidget {
+class MyApp extends StatefulWidget {
   const MyApp({super.key});
 
+  @override
+  State<MyApp> createState() => _MyAppState();
+}
+
+class _MyAppState extends State<MyApp> {
   // Root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
         title: 'FIRE Core Components',
         theme: Provider.of<ThemeModel>(context).currentTheme,
-        home: const SafeArea(child: NavigationControllerSample())
+        home: SafeArea(child: NavigationControllerSample())
     );
   }
 }

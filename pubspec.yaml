@@ -21,6 +21,7 @@ dependencies:
   cupertino_icons: ^1.0.2
   google_fonts: ^6.1.0
   fl_chart: ^0.66.2
+  draggable_home: ^1.0.5
 
 dev_dependencies:
   lints: ^3.0.0

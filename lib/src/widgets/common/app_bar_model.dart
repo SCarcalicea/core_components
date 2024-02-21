@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+@Deprecated('Use ScrollableScaffold instead')
 class AppBarModel {
 
   final BuildContext context;
