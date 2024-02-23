@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+/// This widget represents a list item with 3 rows: a title and 2 rows for details
 class ExpensesListItem extends StatelessWidget {
   final bool isExpense;
   final Widget itemDetails;
@@ -18,9 +19,7 @@ class ExpensesListItem extends StatelessWidget {
     return ListTile(
       leading: Icon(
         isExpense ? Icons.paid_outlined : Icons.money_off,
-        color: isExpense
-            ? Colors.green
-            : Colors.red,
+        color: isExpense ? Colors.green : Colors.red,
       ),
       title: itemDetails,
       subtitle: itemDate,

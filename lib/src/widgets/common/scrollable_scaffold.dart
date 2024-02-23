@@ -1,8 +1,10 @@
 import 'package:draggable_home/draggable_home.dart';
 import 'package:flutter/material.dart';
 
+/// This widget represents the body of a page which contains an inward rounded app bar
+/// The inward rounded appbar can have multiple widgets and actions
+/// The whole body of the widget is scrollable hence no scrollable widgets allowed
 class ScrollableScaffold extends StatefulWidget {
-
   final Widget? leading;
   final Widget? bottomBarWidget;
   final List<Widget>? actions;
@@ -12,16 +14,15 @@ class ScrollableScaffold extends StatefulWidget {
   final Widget title;
   final List<Widget> body;
 
-  const ScrollableScaffold({
-    this.leading,
-    this.bottomBarWidget,
-    this.actions,
-    this.headerWidget,
-    this.headerExpandedHeight = 0.18,
-    this.curvedBodyRadius = 40,
-    required this.title,
-    required this.body
-  });
+  const ScrollableScaffold(
+      {this.leading,
+      this.bottomBarWidget,
+      this.actions,
+      this.headerWidget,
+      this.headerExpandedHeight = 0.18,
+      this.curvedBodyRadius = 40,
+      required this.title,
+      required this.body});
 
   @override
   State<StatefulWidget> createState() => _ScrollableScaffold();
@@ -50,10 +51,7 @@ class _ScrollableScaffold extends State<ScrollableScaffold> {
   Widget headerWidget(BuildContext context) {
     return Container(
       color: Theme.of(context).primaryColor,
-      child: Center(
-        child: widget.headerWidget
-      ),
+      child: Center(child: widget.headerWidget),
     );
   }
-
 }

@@ -1,19 +1,17 @@
 import 'package:flutter/material.dart';
 
+/// This widget represents a single rounded rectangular button.
 class RoundedRectangularButton extends StatelessWidget {
-
   final double cornerRadius;
   final Widget label;
   final Icon icon;
   final VoidCallback action;
 
-  const RoundedRectangularButton (
-  {
-    this.cornerRadius = 0.6,
-    required this.label,
-    required this.action,
-    required this.icon
-  });
+  const RoundedRectangularButton(
+      {this.cornerRadius = 0.6,
+      required this.label,
+      required this.action,
+      required this.icon});
 
   @override
   Widget build(BuildContext context) {
@@ -27,7 +25,5 @@ class RoundedRectangularButton extends StatelessWidget {
       icon: icon,
       label: label,
     );
-
   }
-
 }

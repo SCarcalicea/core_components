@@ -1,6 +1,6 @@
-import 'package:fire_core_components/src/widgets/common/buttons/filter_by_period.dart';
+import 'package:fire_core_components/src/widgets/common/buttons/filter_by_period_buttons.dart';
 import 'package:fire_core_components/src/widgets/common/scrollable_scaffold.dart';
-import 'package:fire_core_components/src/widgets/income_expenses/top_summary.dart';
+import 'package:fire_core_components/src/widgets/common/investment_expense_summary.dart';
 import 'package:flutter/material.dart';
 
 class Debts extends StatefulWidget {
@@ -20,7 +20,7 @@ class _Debts extends State<Debts> {
         IconButton(onPressed: () {}, icon: const Icon(Icons.settings)),
       ],
       headerWidget: Container(color: Theme.of(context).primaryColor),
-      bottomBarWidget: FilterByPeriod(
+      bottomBarWidget: FilterByPeriodButtons(
         height: 30,
         monthText: const Text("Month"),
         yearText: const Text("Year"),
@@ -33,7 +33,7 @@ class _Debts extends State<Debts> {
         Container(
             child: SingleChildScrollView(
                 child: Column(children: [
-                  TopSummary(
+                  InvestmentExpenseSummary(
                       textStyle: TextStyle(fontSize: 10),
                       valueStyle: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
                       firstText: "Total Debt",

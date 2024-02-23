@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import '../model/page_destination_model.dart';
 import '../state/page_content_builder_interface.dart';
 
+/// This widget is handling the building process of all components which are designed for a medium/large screen.
 class LargeMediumScreenHandler extends StatefulWidget {
   /// List of PageDestinationModel for the bottom icons
   final List<PageDestinationModel> destinations;

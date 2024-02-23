@@ -1,12 +1,12 @@
-import 'package:fire_core_components/src/widgets/common/buttons/filter_by_period.dart';
-import 'package:fire_core_components/src/widgets/common/progress_indicator/indicator.dart';
-import 'package:fire_core_components/src/widgets/common/non_scrollable_list_view.dart';
+import 'package:fire_core_components/src/widgets/common/buttons/filter_by_period_buttons.dart';
+import 'package:fire_core_components/src/widgets/common/chat/chart_detail.dart';
+import 'package:fire_core_components/src/widgets/common/income_expense_list_view.dart';
 import 'package:fire_core_components/src/widgets/common/scrollable_scaffold.dart';
-import 'package:fire_core_components/src/widgets/common/progress_indicator/secondary_progress_indicator.dart';
-import 'package:fire_core_components/src/widgets/common/top_pie_chart.dart';
-import 'package:fire_core_components/src/widgets/income_expenses/list/expense_model.dart';
-import 'package:fire_core_components/src/widgets/income_expenses/top_summary.dart';
-import 'package:fire_core_components/src/widgets/investments/list/investment_model.dart';
+import 'package:fire_core_components/src/widgets/common/progress_indicator/subcategory_progress_indicator.dart';
+import 'package:fire_core_components/src/widgets/common/chat/income_expense_chart.dart';
+import 'package:fire_core_components/src/widgets/income_expenses/expense_model.dart';
+import 'package:fire_core_components/src/widgets/common/investment_expense_summary.dart';
+import 'package:fire_core_components/src/widgets/investments/investment_model.dart';
 import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/material.dart';
 
@@ -27,7 +27,7 @@ class _Expenses extends State<Expenses> {
         IconButton(onPressed: () {}, icon: const Icon(Icons.settings)),
       ],
       headerWidget: Container(color: Theme.of(context).primaryColor),
-      bottomBarWidget: FilterByPeriod(
+      bottomBarWidget: FilterByPeriodButtons(
         height: 30,
         monthText: const Text("Month"),
         yearText: const Text("Year"),
@@ -40,14 +40,14 @@ class _Expenses extends State<Expenses> {
         Container(
             child: SingleChildScrollView(
                 child: Column(children: [
-                  TopSummary(
+                  InvestmentExpenseSummary(
                       textStyle: TextStyle(fontSize: 10),
                       valueStyle: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
                       firstText: "Total Income",
                       firstValue: "3.5k \$",
                       secondText: "Total Expense",
                       secondValue: "5.2k \$"),
-                  TopPieChart(
+                  IncomeExpenseChart(
                     pieChartSectionData: [
                       PieChartSectionData(
                           color: Colors.green,
@@ -63,28 +63,28 @@ class _Expenses extends State<Expenses> {
                           color: Colors.red, value: 45.0, title: "TEST", radius: 20.00)
                     ],
                     pieChartSectionDetails: [
-                      Indicator(color: Colors.green, text: "TEST", isSquare: false),
-                      Indicator(color: Colors.blue, text: "TEST", isSquare: false),
-                      Indicator(color: Colors.red, text: "TEST", isSquare: false),
-                      Indicator(color: Colors.blue, text: "TEST", isSquare: false),
-                      Indicator(color: Colors.red, text: "TEST", isSquare: false),
+                      ChartDetail(color: Colors.green, text: "TEST", isSquare: false),
+                      ChartDetail(color: Colors.blue, text: "TEST", isSquare: false),
+                      ChartDetail(color: Colors.red, text: "TEST", isSquare: false),
+                      ChartDetail(color: Colors.blue, text: "TEST", isSquare: false),
+                      ChartDetail(color: Colors.red, text: "TEST", isSquare: false),
                     ],
                   ),
                   Padding(
                     padding: EdgeInsets.only(right: 20, left: 20),
                     child: Column(
                       children: [
-                        SecondaryProgressIndicator(
+                        SubcategoryProgressIndicator(
                             description: Text("Needs   "),
                             percentage: Text("13%"),
                             percentageValue: 0.13,
                             color: Colors.green),
-                        SecondaryProgressIndicator(
+                        SubcategoryProgressIndicator(
                             description: Text("Wants   "),
                             percentage: Text("67%"),
                             percentageValue: 0.67,
                             color: Colors.blue),
-                        SecondaryProgressIndicator(
+                        SubcategoryProgressIndicator(
                             description: Text("Savings"),
                             percentage: Text("20%"),
                             percentageValue: 0.20,
@@ -92,7 +92,7 @@ class _Expenses extends State<Expenses> {
                       ],
                     ),
                   ),
-                  NonScrollableListView(
+                  IncomeExpenseListView(
                     modelType: ExpenseModel.type,
                     expenseModels: buildExpenseModel(),
                     investmentModels: buildInvestmentModel(),

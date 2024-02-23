@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 
-class Indicator extends StatefulWidget {
-  const Indicator({
+/// This widget represents a line for the details of the income and expense chart widget
+class ChartDetail extends StatefulWidget {
+  const ChartDetail({
     super.key,
     required this.color,
     required this.text,
@@ -16,10 +17,10 @@ class Indicator extends StatefulWidget {
   final Color? textColor;
 
   @override
-  State<Indicator> createState() => _IndicatorState();
+  State<ChartDetail> createState() => _ChartDetailState();
 }
 
-class _IndicatorState extends State<Indicator> {
+class _ChartDetailState extends State<ChartDetail> {
   @override
   Widget build(BuildContext context) {
     return Row(

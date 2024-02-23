@@ -12,7 +12,7 @@ class Dashboard extends StatefulWidget {
 class _Dashboard extends State<Dashboard> {
   bool changeAppBar = false;
   ThemeSwitcher themeSwitcher = ThemeSwitcher();
-  Summary summary = Summary(
+  OverallSummary summary = OverallSummary(
       labelStyle: TextStyle(fontSize: 10),
       valueStyle: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
       currentBalance: 10000.0,
@@ -32,7 +32,7 @@ class _Dashboard extends State<Dashboard> {
           IconButton(onPressed: () {}, icon: const Icon(Icons.settings)),
         ],
         headerWidget: Container(color: Theme.of(context).primaryColor),
-        bottomBarWidget: FilterByPeriod(
+        bottomBarWidget: FilterByPeriodButtons(
           height: 30,
           monthText: const Text("Month"),
           yearText: const Text("Year"),

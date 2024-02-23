@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 
-class Summary {
+/// This widget represents a card with 6 lines of text
+/// You can define two styles which are divided amongst the 6 lines
+/// First line has the 'labelStyle', the second line has the 'valueStyle' and so on
+class OverallSummary {
   double currentBalance;
   double fireAmount;
   double netWorth;
@@ -8,7 +11,7 @@ class Summary {
   TextStyle? labelStyle;
   TextStyle? valueStyle;
 
-  Summary(
+  OverallSummary(
       {this.labelStyle,
       this.valueStyle,
       required this.currentBalance,

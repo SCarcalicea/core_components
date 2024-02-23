@@ -1,8 +1,8 @@
 import 'package:fire_core_components/src/widgets/common/buttons/rounded_rectangular_button.dart';
 import 'package:flutter/material.dart';
 
-class FilterByPeriod extends StatelessWidget {
-
+/// This widget represents a row of rounded rectangular buttons.
+class FilterByPeriodButtons extends StatelessWidget {
   final double height;
   final VoidCallback weekCallback;
   final Text weekText;
@@ -11,7 +11,7 @@ class FilterByPeriod extends StatelessWidget {
   final VoidCallback yearCallback;
   final Text yearText;
 
-  const FilterByPeriod({
+  const FilterByPeriodButtons({
     super.key,
     required this.height,
     required this.weekCallback,

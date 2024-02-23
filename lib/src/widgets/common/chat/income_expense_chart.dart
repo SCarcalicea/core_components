@@ -1,28 +1,27 @@
 import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/material.dart';
 
-class TopPieChart extends StatefulWidget {
-
+/// This widget is a graphical representation, using a chart with details, of expenses, investments, etc
+class IncomeExpenseChart extends StatefulWidget {
   final double mainHeight;
   final double margins;
   final double elevation;
   final List<PieChartSectionData> pieChartSectionData;
   final List<Widget> pieChartSectionDetails;
 
-  const TopPieChart({
-    super.key,
-    this.mainHeight = 225,
-    this.margins = 20,
-    this.elevation = 20,
-    required this.pieChartSectionData,
-    required this.pieChartSectionDetails
-  });
+  const IncomeExpenseChart(
+      {super.key,
+      this.mainHeight = 225,
+      this.margins = 20,
+      this.elevation = 20,
+      required this.pieChartSectionData,
+      required this.pieChartSectionDetails});
 
   @override
-  State<TopPieChart> createState() => _TopPieChartState();
+  State<IncomeExpenseChart> createState() => _IncomeExpenseChartState();
 }
 
-class _TopPieChartState extends State<TopPieChart> {
+class _IncomeExpenseChartState extends State<IncomeExpenseChart> {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
@@ -38,8 +37,7 @@ class _TopPieChartState extends State<TopPieChart> {
                 Container(
                   width: MediaQuery.of(context).size.width / 2,
                   child: PieChart(
-                      PieChartData(
-                      sections: widget.pieChartSectionData)),
+                      PieChartData(sections: widget.pieChartSectionData)),
                 ),
                 Container(
                   child: Column(

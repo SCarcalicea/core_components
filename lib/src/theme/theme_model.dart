@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
+/// This provider represents the core component for the theme of the entire application.
 class ThemeModel extends ChangeNotifier {
   ThemeData _currentTheme = lightTheme();
 

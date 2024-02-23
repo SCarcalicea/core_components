@@ -1,6 +1,7 @@
 import 'package:fire_core_components/src/widgets/common/app_bar/app_bar_model.dart';
 import 'package:flutter/material.dart';
 
+/// Before the implementation of ScrollableScaffold this widget was used in order to build the app bar.
 @Deprecated('Use ScrollableScaffold instead')
 class AppBarFactory {
   /// Builds a generic AppBar widget using a model

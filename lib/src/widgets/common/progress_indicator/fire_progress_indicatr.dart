@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+/// This widget represents the current progress until FIRE
+/// Based in the percentage, the colour of the indicator is red, green or blue.
 class FireProgressIndicator {
   TextStyle? textStyle;
 

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../../../fire_core_components.dart';
 
+/// This widget is handling the building process of all components which are designed for a small screen.
 class SmallScreenHandler extends StatefulWidget {
   /// List of PageDestinationModel for the bottom icons
   final List<PageDestinationModel> destinations;

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+/// This widget has an icon and underneath two lines of text, basically a summary for each category.
 class CategorySummary {
   Icon icon;
   String labelText;

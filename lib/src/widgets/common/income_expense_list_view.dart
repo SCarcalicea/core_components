@@ -1,17 +1,19 @@
-import 'package:fire_core_components/src/widgets/investments/list/investment_list_item.dart';
+import 'package:fire_core_components/src/widgets/investments/investment_list_item.dart';
 import 'package:flutter/material.dart';
 
-import '../income_expenses/list/expense_list_item.dart';
-import '../income_expenses/list/expense_model.dart';
-import '../investments/list/investment_model.dart';
+import '../income_expenses/expense_list_item.dart';
+import '../income_expenses/expense_model.dart';
+import '../investments/investment_model.dart';
 
-class NonScrollableListView extends StatelessWidget {
+/// This widget represents a list of widgets and uses a data model for each item
+/// The list is not scrollable
+class IncomeExpenseListView extends StatelessWidget {
   final double margin;
   final String modelType;
   final List<ExpenseModel>? expenseModels;
   final List<InvestmentModel>? investmentModels;
 
-  const NonScrollableListView(
+  const IncomeExpenseListView(
       {super.key,
       this.margin = 20,
       this.expenseModels,

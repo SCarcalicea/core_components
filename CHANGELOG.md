@@ -8,7 +8,7 @@
 
 ## 1.0.2
 
-- Adding mode documentation, small refactorization. 
+- Adding mode documentation, small re-factorization. 
 
 ## 1.0.3
 
@@ -22,3 +22,7 @@
 
 - Added support for scrollable content using draggable_home widget
 - Implemented all required components for expenses and investments
+
+## 1.0.6
+
+- Better names for components
