@@ -1,12 +1,11 @@
 import 'package:fire_core_components/src/widgets/common/buttons/filter_by_period_buttons.dart';
 import 'package:fire_core_components/src/widgets/common/chat/chart_detail.dart';
-import 'package:fire_core_components/src/widgets/common/income_expense_list_view.dart';
-import 'package:fire_core_components/src/widgets/common/scrollable_scaffold.dart';
-import 'package:fire_core_components/src/widgets/common/progress_indicator/subcategory_progress_indicator.dart';
 import 'package:fire_core_components/src/widgets/common/chat/income_expense_chart.dart';
-import 'package:fire_core_components/src/widgets/income_expenses/expense_model.dart';
+import 'package:fire_core_components/src/widgets/common/income_expense_list_view.dart';
 import 'package:fire_core_components/src/widgets/common/investment_expense_summary.dart';
-import 'package:fire_core_components/src/widgets/investments/investment_model.dart';
+import 'package:fire_core_components/src/widgets/common/progress_indicator/subcategory_progress_indicator.dart';
+import 'package:fire_core_components/src/widgets/common/scrollable_scaffold.dart';
+import 'package:fire_core_components/src/widgets/income_expenses/expense_model.dart';
 import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/material.dart';
 
@@ -95,7 +94,6 @@ class _Expenses extends State<Expenses> {
                   IncomeExpenseListView(
                     modelType: ExpenseModel.type,
                     expenseModels: buildExpenseModel(),
-                    investmentModels: buildInvestmentModel(),
                   )
                 ]
                 )
@@ -118,17 +116,4 @@ List<ExpenseModel> buildExpenseModel() {
   }
 
   return expenseModel;
-}
-
-List<InvestmentModel> buildInvestmentModel() {
-  List<InvestmentModel> investmentModel = [];
-
-  for (int i = 0; i < 5; i++) {
-    investmentModel.add(InvestmentModel(
-        itemTitle: "Binance",
-        itemDetailsLine1: "Initial value: 1.24k \$",
-        itemDetailsLine2: "Current value: 1.24k \$"));
-  }
-
-  return investmentModel;
 }

@@ -34,15 +34,19 @@ class _IncomeExpenseChartState extends State<IncomeExpenseChart> {
             margin: EdgeInsets.all(widget.margins),
             child: Row(
               children: [
-                Container(
-                  width: MediaQuery.of(context).size.width / 2,
-                  child: PieChart(
-                      PieChartData(sections: widget.pieChartSectionData)),
+                Expanded(
+                  child: Container(
+                    child: PieChart(
+                        PieChartData(sections: widget.pieChartSectionData)),
+                  ),
                 ),
-                Container(
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: widget.pieChartSectionDetails,
+                Expanded(
+                  child: Container(
+                    margin: EdgeInsets.only(left: widget.margins * 2),
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: widget.pieChartSectionDetails,
+                    ),
                   ),
                 )
               ],
