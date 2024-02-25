@@ -16,10 +16,20 @@ class _Investments extends State<Investments> {
     return ScrollableScaffold(
       leading: const Icon(Icons.menu),
       title: Text("Investments"),
+      headerExpandedHeight: 0.25,
       actions: [
         IconButton(onPressed: () {}, icon: const Icon(Icons.settings)),
       ],
-      headerWidget: Container(color: Theme.of(context).primaryColor),
+      headerWidget: Container(
+          color: Theme.of(context).primaryColor,
+        child:
+        RoundedRectangularButton(
+          label: Text("Add Investment"),
+          action: () {},
+          icon: Icon(null),
+        ),
+
+      ),
       bottomBarWidget: FilterByPeriodButtons(
         height: 30,
         monthText: const Text("Month"),

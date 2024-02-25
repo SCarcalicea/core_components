@@ -48,37 +48,12 @@ class _Dashboard extends State<Dashboard> {
               child: Column(
                 children: [
                   SizedBox(height: 10),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Card(
-                          child: Container(
-                              padding: EdgeInsets.all(20),
-                              child: Row(children: [
-                                const Text('Change AppBar'),
-                                Switch(
-                                    value: changeAppBar,
-                                    onChanged: (value) => setState(() {
-                                          changeAppBar = value;
-                                        })),
-                              ]))),
-                      SizedBox(height: 10),
-                      themeSwitcher.switchTheme(context),
-                    ],
-                  ),
-                  SizedBox(height: 10),
                   summary.buildSummary("CURRENT BALANCE", "F.I.R.E AMOUNT",
                       "NET WORTH", 20.0, 20.0, 20.0),
-                  SizedBox(height: 10),
                   Divider(),
-                  progressIndicator.buildProgressIndicator(
-                      "Financial Independence Progress: 0.4", 0.4, 20),
-                  progressIndicator.buildProgressIndicator(
-                      "Financial Independence Progress: 0.5", 0.5, 20),
                   progressIndicator.buildProgressIndicator(
                       "Financial Independence Progress: 0.8", 0.8, 20),
                   Divider(),
-                  SizedBox(height: 10),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
@@ -87,7 +62,7 @@ class _Dashboard extends State<Dashboard> {
                               valueStyle: TextStyle(
                                   fontWeight: FontWeight.bold, fontSize: 20),
                               icon: Icon(Icons.ac_unit),
-                              labelText: "Testing 1",
+                              labelText: "Investments",
                               currency: "\$",
                               value: 10000.0)
                           .buildCategorySummary(20, 20, 20),
@@ -96,7 +71,7 @@ class _Dashboard extends State<Dashboard> {
                               valueStyle: TextStyle(
                                   fontWeight: FontWeight.bold, fontSize: 20),
                               icon: Icon(Icons.ac_unit),
-                              labelText: "Testing 1",
+                              labelText: "Expenses",
                               currency: "\$",
                               value: 10000.0)
                           .buildCategorySummary(20, 20, 20),
@@ -111,7 +86,7 @@ class _Dashboard extends State<Dashboard> {
                               valueStyle: TextStyle(
                                   fontWeight: FontWeight.bold, fontSize: 20),
                               icon: Icon(Icons.ac_unit),
-                              labelText: "Testing 1",
+                              labelText: "Net Worth",
                               currency: "\$",
                               value: 10000.0)
                           .buildCategorySummary(20, 20, 20),
@@ -120,7 +95,7 @@ class _Dashboard extends State<Dashboard> {
                               valueStyle: TextStyle(
                                   fontWeight: FontWeight.bold, fontSize: 20),
                               icon: Icon(Icons.ac_unit),
-                              labelText: "Testing 1",
+                              labelText: "Debts",
                               currency: "\$",
                               value: 10000.0)
                           .buildCategorySummary(20, 20, 20),
