@@ -15,5 +15,3 @@ Check `/example` for a sample usage of the components.
 ## Additional information
 
 This should be a starting point for creating one application which can dynamically adjust to any screen size.
-
-Branch locked, read-only for now.
