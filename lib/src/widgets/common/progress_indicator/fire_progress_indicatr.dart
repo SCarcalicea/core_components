@@ -2,13 +2,21 @@ import 'package:flutter/material.dart';
 
 /// This widget represents the current progress until FIRE
 /// Based in the percentage, the colour of the indicator is red, green or blue.
-class FireProgressIndicator {
-  TextStyle? textStyle;
+class FireProgressIndicator extends StatelessWidget {
+  final TextStyle? textStyle;
+  final String progressPercentageText;
+  final double financialIndependenceProgress;
+  final double margin;
 
-  FireProgressIndicator({this.textStyle});
+  FireProgressIndicator({
+    this.textStyle,
+    this.margin = 20,
+    required this.progressPercentageText,
+    required this.financialIndependenceProgress,
+  });
 
-  Widget buildProgressIndicator(String progressPercentageText,
-      double financialIndependenceProgress, double margin) {
+  @override
+  Widget build(BuildContext context) {
     return Container(
         padding: EdgeInsets.all(margin),
         child: _buildProgressIndicator(

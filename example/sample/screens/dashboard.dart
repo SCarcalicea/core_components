@@ -1,5 +1,4 @@
 import 'package:fire_core_components/fire_core_components.dart';
-import 'package:fire_core_components/src/theme/theme_switcher.dart';
 import 'package:flutter/material.dart';
 
 class Dashboard extends StatefulWidget {
@@ -10,19 +9,6 @@ class Dashboard extends StatefulWidget {
 }
 
 class _Dashboard extends State<Dashboard> {
-  bool changeAppBar = false;
-  ThemeSwitcher themeSwitcher = ThemeSwitcher();
-  OverallSummary summary = OverallSummary(
-      labelStyle: TextStyle(fontSize: 10),
-      valueStyle: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
-      currentBalance: 10000.0,
-      fireAmount: 1000000.0,
-      netWorth: 1000.0,
-      currency: "\$");
-
-  FireProgressIndicator progressIndicator = FireProgressIndicator(
-      textStyle: TextStyle(fontWeight: FontWeight.bold, fontSize: 20));
-
   @override
   Widget build(BuildContext context) {
     return ScrollableScaffold(
@@ -48,11 +34,17 @@ class _Dashboard extends State<Dashboard> {
               child: Column(
                 children: [
                   SizedBox(height: 10),
-                  summary.buildSummary("CURRENT BALANCE", "F.I.R.E AMOUNT",
-                      "NET WORTH", 20.0, 20.0, 20.0),
+                  OverallSummary(currentBalance: 10000.0,
+                      fireAmount: 1000000.0,
+                      netWorth: 1000.0,
+                      currency: "\$",
+                      currentBalanceLabel: "CURRENT BALANCE",
+                      fireAmountLabel: "F.I.R.E AMOUNT",
+                      netWorthLabel: "NET WORTH"),
                   Divider(),
-                  progressIndicator.buildProgressIndicator(
-                      "Financial Independence Progress: 0.8", 0.8, 20),
+                  FireProgressIndicator(
+                      progressPercentageText: "Financial Independence Progress: 0.8",
+                      financialIndependenceProgress: 0.8),
                   Divider(),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,

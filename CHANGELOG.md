@@ -26,3 +26,7 @@
 ## 1.0.6
 
 - Better names for components
+
+## 1.0.7
+
+- Converted simple objects into stateless widgets.

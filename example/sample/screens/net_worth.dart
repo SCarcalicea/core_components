@@ -10,9 +10,6 @@ class NetWorth extends StatefulWidget {
 
 class _NetWorth extends State<NetWorth> {
 
-  FireProgressIndicator progressIndicator = FireProgressIndicator(
-      textStyle: TextStyle(fontWeight: FontWeight.bold, fontSize: 20));
-
   @override
   Widget build(BuildContext context) {
     return ScrollableScaffold(
@@ -34,8 +31,9 @@ class _NetWorth extends State<NetWorth> {
                       secondText: "Debts",
                       secondValue: "500k \$"),
                 ]))),
-        progressIndicator.buildProgressIndicator(
-            "Financial Independence Progress: 0.5", 0.5, 20),
+        FireProgressIndicator(
+            progressPercentageText: "Financial Independence Progress: 0.5",
+            financialIndependenceProgress: 0.5),
         Container(
           margin: EdgeInsets.only(top: 20),
           child: IncomeExpenseListView(

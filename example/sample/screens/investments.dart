@@ -1,6 +1,5 @@
 import 'package:fire_core_components/fire_core_components.dart';
 import 'package:fl_chart/fl_chart.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class Investments extends StatefulWidget {

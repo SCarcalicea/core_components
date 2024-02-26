@@ -1,6 +1,6 @@
 name: fire_core_components
 description: A simple way of managing multiple screen sizes, you just need to provide a PageContentBuilder implementation and a list of PageDestinationModel
-version: 1.0.6
+version: 1.0.7
 repository: https://github.com/SCarcalicea/core_components
 issue_tracker: https://github.com/SCarcalicea/core_components/issues
 
