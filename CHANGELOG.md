@@ -30,3 +30,7 @@
 ## 1.0.7
 
 - Converted simple objects into stateless widgets.
+
+## 1.0.8
+
+- Converted CategorySummary object into stateless widgets.
