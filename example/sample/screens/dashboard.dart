@@ -56,8 +56,7 @@ class _Dashboard extends State<Dashboard> {
                               icon: Icon(Icons.ac_unit),
                               labelText: "Investments",
                               currency: "\$",
-                              value: 10000.0)
-                          .buildCategorySummary(20, 20, 20),
+                              value: 10000.0),
                       CategorySummary(
                               labelStyle: TextStyle(fontSize: 20),
                               valueStyle: TextStyle(
@@ -66,7 +65,6 @@ class _Dashboard extends State<Dashboard> {
                               labelText: "Expenses",
                               currency: "\$",
                               value: 10000.0)
-                          .buildCategorySummary(20, 20, 20),
                     ],
                   ),
                   SizedBox(height: 10),
@@ -80,8 +78,7 @@ class _Dashboard extends State<Dashboard> {
                               icon: Icon(Icons.ac_unit),
                               labelText: "Net Worth",
                               currency: "\$",
-                              value: 10000.0)
-                          .buildCategorySummary(20, 20, 20),
+                              value: 10000.0),
                       CategorySummary(
                               labelStyle: TextStyle(fontSize: 20),
                               valueStyle: TextStyle(
@@ -90,7 +87,6 @@ class _Dashboard extends State<Dashboard> {
                               labelText: "Debts",
                               currency: "\$",
                               value: 10000.0)
-                          .buildCategorySummary(20, 20, 20),
                     ],
                   )
                 ],
