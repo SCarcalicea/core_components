@@ -48,7 +48,6 @@ class _NetWorth extends State<NetWorth> {
             investmentModels: buildInvestmentModel(),
           ),
         ),
-
       ],
     );
   }
