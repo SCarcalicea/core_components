@@ -23,7 +23,12 @@ class ExpensesListItem extends StatelessWidget {
       ),
       title: itemDetails,
       subtitle: itemDate,
-      trailing: Text(itemValue),
+      trailing: Text(itemValue,
+      style: TextStyle(
+        fontWeight: FontWeight.bold,
+        color: isExpense ?
+            Colors.green : Colors.red
+      )),
     );
   }
 }
