@@ -74,12 +74,12 @@ class _Expenses extends State<Expenses> {
                     child: Column(
                       children: [
                         SubcategoryProgressIndicator(
-                            description: Text("Needs   "),
+                            description: Text("Needs"),
                             percentage: Text("13%"),
                             percentageValue: 0.13,
                             color: Colors.green),
                         SubcategoryProgressIndicator(
-                            description: Text("Wants   "),
+                            description: Text("Wants"),
                             percentage: Text("67%"),
                             percentageValue: 0.67,
                             color: Colors.blue),

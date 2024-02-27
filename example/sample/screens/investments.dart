@@ -74,7 +74,7 @@ class _Investments extends State<Investments> {
                     child: Column(
                       children: [
                         SubcategoryProgressIndicator(
-                            description: Text("Stock  "),
+                            description: Text("Stock"),
                             percentage: Text("60%"),
                             percentageValue: 0.60,
                             color: Colors.purple),
@@ -82,6 +82,16 @@ class _Investments extends State<Investments> {
                             description: Text("Crypto"),
                             percentage: Text("40%"),
                             percentageValue: 0.40,
+                            color: Colors.blue),
+                        SubcategoryProgressIndicator(
+                            description: Text("Other"),
+                            percentage: Text("0%"),
+                            percentageValue: 0,
+                            color: Colors.purple),
+                        SubcategoryProgressIndicator(
+                            description: Text("Real estate"),
+                            percentage: Text("0%"),
+                            percentageValue: 0,
                             color: Colors.blue)
                       ],
                     ),

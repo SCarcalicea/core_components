@@ -54,3 +54,7 @@
 ## 1.0.13
 
 - Add support for coloured value for income_expense_list_view.dart
+
+## 1.0.14
+
+- Make SubcategoryProgressIndicator more flexible.
