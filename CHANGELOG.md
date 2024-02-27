@@ -38,3 +38,11 @@
 ## 1.0.9
 
 - Add support for text style for income_expense_list_view.dart
+
+## 1.0.10
+
+- Add support for color for income_expense_list_view.dart
+
+## 1.0.11
+
+- Add support for elevation for income_expense_list_view.dart

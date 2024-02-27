@@ -12,10 +12,14 @@ class IncomeExpenseListView extends StatelessWidget {
   final String modelType;
   final List<ExpenseModel>? expenseModels;
   final List<InvestmentModel>? investmentModels;
+  final Color? itemColor;
+  final double? elevation;
 
   const IncomeExpenseListView(
       {super.key,
       this.margin = 20,
+      this.itemColor,
+      this.elevation = 20,
       this.expenseModels,
       this.investmentModels,
       required this.modelType});
@@ -36,24 +40,28 @@ class IncomeExpenseListView extends StatelessWidget {
             case "EXPENSE":
               ExpenseModel model = expenseModels![index];
               return Card(
+                  surfaceTintColor: itemColor,
+                  elevation: elevation,
                   child: ExpensesListItem(
                       isExpense: model.isExpense,
-                      itemDetails: Text(model.itemDetails, style: model.titleStyle),
+                      itemDetails:
+                          Text(model.itemDetails, style: model.titleStyle),
                       itemDate: Text(model.itemDate, style: model.detailsStyle),
                       itemValue: model.itemValue));
 
             case "INVESTMENT":
               InvestmentModel model = investmentModels![index];
               return Card(
+                  surfaceTintColor: itemColor,
                   child: InvestmentListItem(
-                itemTitle: Text(model.itemTitle, style: model.titleStyle),
-                itemDetails2Lines: Column(
-                  children: [
-                    Text(model.itemDetailsLine1, style: model.detailsStyle),
-                    Text(model.itemDetailsLine2, style: model.detailsStyle),
-                  ],
-                ),
-              ));
+                    itemTitle: Text(model.itemTitle, style: model.titleStyle),
+                    itemDetails2Lines: Column(
+                      children: [
+                        Text(model.itemDetailsLine1, style: model.detailsStyle),
+                        Text(model.itemDetailsLine2, style: model.detailsStyle),
+                      ],
+                    ),
+                  ));
           }
 
           return null;
