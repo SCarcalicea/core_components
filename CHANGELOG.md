@@ -46,3 +46,7 @@
 ## 1.0.11
 
 - Add support for elevation for income_expense_list_view.dart
+
+## 1.0.12
+
+- (bug fix) Add support for elevation for income_expense_list_view.dart

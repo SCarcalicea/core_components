@@ -53,6 +53,7 @@ class IncomeExpenseListView extends StatelessWidget {
               InvestmentModel model = investmentModels![index];
               return Card(
                   surfaceTintColor: itemColor,
+                  elevation: elevation,
                   child: InvestmentListItem(
                     itemTitle: Text(model.itemTitle, style: model.titleStyle),
                     itemDetails2Lines: Column(
