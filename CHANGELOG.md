@@ -34,3 +34,7 @@
 ## 1.0.8
 
 - Converted CategorySummary object into stateless widgets.
+
+## 1.0.9
+
+- Add support for text style for income_expense_list_view.dart

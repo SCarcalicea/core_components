@@ -1,3 +1,5 @@
+import 'package:flutter/material.dart';
+
 /// Data model for investment list item
 class ExpenseModel {
   final bool isExpense;
@@ -5,9 +7,13 @@ class ExpenseModel {
   final String itemDate;
   final String itemValue;
   static String type = "EXPENSE";
+  final TextStyle? titleStyle;
+  final TextStyle? detailsStyle;
 
   const ExpenseModel(
-      {required this.isExpense,
+      {this.titleStyle,
+      this.detailsStyle,
+      required this.isExpense,
       required this.itemDetails,
       required this.itemDate,
       required this.itemValue});

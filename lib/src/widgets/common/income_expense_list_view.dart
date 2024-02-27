@@ -22,10 +22,9 @@ class IncomeExpenseListView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-
-    int itemCount = modelType == ExpenseModel.type ?
-        expenseModels!.length :
-        investmentModels!.length;
+    int itemCount = modelType == ExpenseModel.type
+        ? expenseModels!.length
+        : investmentModels!.length;
 
     return ListView.builder(
         padding: EdgeInsets.only(top: 0, left: margin, right: margin),
@@ -35,32 +34,29 @@ class IncomeExpenseListView extends StatelessWidget {
         itemBuilder: (context, index) {
           switch (modelType) {
             case "EXPENSE":
-
               ExpenseModel model = expenseModels![index];
               return Card(
                   child: ExpensesListItem(
                       isExpense: model.isExpense,
-                      itemDetails: Text(model.itemDetails),
-                      itemDate: Text(model.itemDate),
+                      itemDetails: Text(model.itemDetails, style: model.titleStyle),
+                      itemDate: Text(model.itemDate, style: model.detailsStyle),
                       itemValue: model.itemValue));
 
             case "INVESTMENT":
-
               InvestmentModel model = investmentModels![index];
               return Card(
                   child: InvestmentListItem(
-                    itemTitle: Text(model.itemTitle),
-                    itemDetails2Lines: Column(
-                      children: [
-                        Text(model.itemDetailsLine1),
-                        Text(model.itemDetailsLine2),
-                      ],
-                    ),
-                  ));
+                itemTitle: Text(model.itemTitle, style: model.titleStyle),
+                itemDetails2Lines: Column(
+                  children: [
+                    Text(model.itemDetailsLine1, style: model.detailsStyle),
+                    Text(model.itemDetailsLine2, style: model.detailsStyle),
+                  ],
+                ),
+              ));
           }
 
           return null;
-
         });
   }
 }
