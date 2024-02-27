@@ -25,6 +25,14 @@ dev_dependencies:
   test: ^1.24.0
 
 # TODO: Temporary fix
+#  * Non-dev dependencies are overridden in pubspec.yaml.
+#
+#  This indicates you are not testing your package against the same versions of its
+#  dependencies that users will have when they use it.
+#
+#  This might be necessary for packages with cyclic dependencies.
+#
+#  Please be extra careful when publishing.
 dependency_overrides:
   web: 0.5.0
 
