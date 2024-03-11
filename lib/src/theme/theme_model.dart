@@ -19,6 +19,7 @@ class ThemeModel extends ChangeNotifier {
   static ThemeData lightTheme() {
     return ThemeData(
         colorScheme: commonColorScheme(false),
+        navigationBarTheme: navigationBarThemeData(),
         primaryColor: Color(0xff2457C5),
         useMaterial3: true,
         textTheme: commonTextTheme());
@@ -27,6 +28,7 @@ class ThemeModel extends ChangeNotifier {
   static ThemeData darkTheme() {
     return ThemeData(
         colorScheme: commonColorScheme(true),
+        navigationBarTheme: navigationBarThemeData(),
         primaryColor: Colors.deepPurple,
         useMaterial3: true,
         textTheme: commonTextTheme());
@@ -52,5 +54,21 @@ class ThemeModel extends ChangeNotifier {
         // Labels for widgets
         labelSmall: GoogleFonts.sourceCodePro(),
         labelLarge: GoogleFonts.sourceCodePro());
+  }
+
+  static NavigationBarThemeData navigationBarThemeData() {
+    return NavigationBarThemeData(
+      labelTextStyle: MaterialStateProperty.resolveWith((states) {
+        // Define different text styles based on different states
+        if (states.contains(MaterialState.selected)) {
+          // Return selected text style
+          return GoogleFonts.sourceCodePro(
+              fontSize: 12, fontWeight: FontWeight.bold);
+        } else {
+          // Return unselected text style
+          return GoogleFonts.sourceCodePro(fontSize: 12);
+        }
+      }),
+    );
   }
 }

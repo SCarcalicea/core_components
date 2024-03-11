@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 class IncomeExpenseChart extends StatefulWidget {
   final double mainHeight;
   final double margins;
+  final double insideGap;
   final double elevation;
   final List<PieChartSectionData> pieChartSectionData;
   final List<Widget> pieChartSectionDetails;
@@ -13,6 +14,7 @@ class IncomeExpenseChart extends StatefulWidget {
       {super.key,
       this.mainHeight = 225,
       this.margins = 20,
+      this.insideGap = 20,
       this.elevation = 20,
       required this.pieChartSectionData,
       required this.pieChartSectionDetails});
@@ -42,7 +44,7 @@ class _IncomeExpenseChartState extends State<IncomeExpenseChart> {
                 ),
                 Expanded(
                   child: Container(
-                    margin: EdgeInsets.only(left: widget.margins * 2),
+                    margin: EdgeInsets.only(left: widget.insideGap),
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: widget.pieChartSectionDetails,

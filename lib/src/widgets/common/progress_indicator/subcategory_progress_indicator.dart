@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 class SubcategoryProgressIndicator extends StatefulWidget {
   final double margin;
   final double gapSize;
+  final int splitWidthBy;
   final Text description;
   final double percentageValue;
   final Text percentage;
@@ -13,6 +14,7 @@ class SubcategoryProgressIndicator extends StatefulWidget {
   const SubcategoryProgressIndicator(
       {this.margin = 20,
       this.gapSize = 100,
+      this.splitWidthBy = 2,
       required this.description,
       required this.percentage,
       required this.percentageValue,
@@ -23,10 +25,8 @@ class SubcategoryProgressIndicator extends StatefulWidget {
 }
 
 class _SecondaryProgressIndicator extends State<SubcategoryProgressIndicator> {
-
   @override
   Widget build(BuildContext context) {
-
     double width = MediaQuery.of(context).size.width - widget.margin * 2;
 
     return Container(
@@ -35,7 +35,7 @@ class _SecondaryProgressIndicator extends State<SubcategoryProgressIndicator> {
       child: Row(
         children: [
           Container(
-            width: width/3,
+            width: width / widget.splitWidthBy,
             child: Row(
               children: [
                 Icon(Icons.circle, color: widget.color),
