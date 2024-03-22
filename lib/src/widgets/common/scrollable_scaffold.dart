@@ -7,6 +7,7 @@ import 'package:flutter/material.dart';
 class ScrollableScaffold extends StatefulWidget {
   final Widget? leading;
   final Widget? bottomBarWidget;
+  final Widget? floatingActionButton;
   final List<Widget>? actions;
   final Widget? headerWidget;
   final double headerExpandedHeight;
@@ -17,6 +18,7 @@ class ScrollableScaffold extends StatefulWidget {
   const ScrollableScaffold(
       {this.leading,
       this.bottomBarWidget,
+      this.floatingActionButton,
       this.actions,
       this.headerWidget,
       this.headerExpandedHeight = 0.18,
@@ -44,6 +46,7 @@ class _ScrollableScaffold extends State<ScrollableScaffold> {
       headerBottomBar: widget.bottomBarWidget,
       actions: widget.actions,
       headerWidget: headerWidget(context),
+      floatingActionButton: widget.floatingActionButton,
       body: widget.body,
     );
   }

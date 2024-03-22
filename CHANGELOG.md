@@ -64,3 +64,7 @@
 - Make income and expense chart more flexible, inside gap is customizable now.
 - Make subcategory progress indicator customizable, split width by can be set by the user.
 - Make the bottom navigation bar label customizable using the theme data, example of label text size setup is implemented in theme model.
+
+## 1.0.16
+
+- Add support for floating action button for ScrollableScaffold
