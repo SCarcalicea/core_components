@@ -31,74 +31,71 @@ class _Expenses extends State<Expenses> {
         monthText: const Text("Month"),
         yearText: const Text("Year"),
         weekText: const Text("Week"),
-        mothCallback: () { },
-        weekCallback: () { },
-        yearCallback: () { },
+        mothCallback: () {},
+        weekCallback: () {},
+        yearCallback: () {},
       ),
       body: [
         Container(
             child: SingleChildScrollView(
                 child: Column(children: [
-                  InvestmentExpenseSummary(
-                      textStyle: TextStyle(fontSize: 10),
-                      valueStyle: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
-                      firstText: "Total Income",
-                      firstValue: "3.5k \$",
-                      secondText: "Total Expense",
-                      secondValue: "5.2k \$"),
-                  IncomeExpenseChart(
-                    pieChartSectionData: [
-                      PieChartSectionData(
-                          color: Colors.green,
-                          value: 35.0,
-                          title: "TEST 1",
-                          radius: 20.00),
-                      PieChartSectionData(
-                          color: Colors.blue,
-                          value: 30.0,
-                          title: "TEST",
-                          radius: 20.00),
-                      PieChartSectionData(
-                          color: Colors.red, value: 45.0, title: "TEST", radius: 20.00)
-                    ],
-                    pieChartSectionDetails: [
-                      ChartDetail(color: Colors.green, text: "TEST", isSquare: false),
-                      ChartDetail(color: Colors.blue, text: "TEST", isSquare: false),
-                      ChartDetail(color: Colors.red, text: "TEST", isSquare: false),
-                      ChartDetail(color: Colors.blue, text: "TEST", isSquare: false),
-                      ChartDetail(color: Colors.red, text: "TEST", isSquare: false),
-                    ],
-                  ),
-                  Padding(
-                    padding: EdgeInsets.only(right: 20, left: 20),
-                    child: Column(
-                      children: [
-                        SubcategoryProgressIndicator(
-                            description: Text("Needs"),
-                            percentage: Text("13%"),
-                            percentageValue: 0.13,
-                            color: Colors.green),
-                        SubcategoryProgressIndicator(
-                            description: Text("Wants"),
-                            percentage: Text("67%"),
-                            percentageValue: 0.67,
-                            color: Colors.blue),
-                        SubcategoryProgressIndicator(
-                            description: Text("Savings"),
-                            percentage: Text("20%"),
-                            percentageValue: 0.20,
-                            color: Colors.red),
-                      ],
-                    ),
-                  ),
-                  IncomeExpenseListView(
-                    modelType: ExpenseModel.type,
-                    expenseModels: buildExpenseModel(),
-                  )
-                ]
-                )
-            )
-        )
+          InvestmentExpenseSummary(
+              textStyle: TextStyle(fontSize: 10),
+              valueStyle: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
+              firstText: "Total Income",
+              firstValue: "3.5k \$",
+              secondText: "Total Expense",
+              secondValue: "5.2k \$"),
+          IncomeExpenseChart(
+            pieChartSectionData: [
+              PieChartSectionData(
+                  color: Colors.green,
+                  value: 35.0,
+                  title: "TEST 1",
+                  radius: 20.00),
+              PieChartSectionData(
+                  color: Colors.blue,
+                  value: 30.0,
+                  title: "TEST",
+                  radius: 20.00),
+              PieChartSectionData(
+                  color: Colors.red, value: 45.0, title: "TEST", radius: 20.00)
+            ],
+            pieChartSectionDetails: [
+              ChartDetail(color: Colors.green, text: "TEST", isSquare: false),
+              ChartDetail(color: Colors.blue, text: "TEST", isSquare: false),
+              ChartDetail(color: Colors.red, text: "TEST", isSquare: false),
+              ChartDetail(color: Colors.blue, text: "TEST", isSquare: false),
+              ChartDetail(color: Colors.red, text: "TEST", isSquare: false),
+            ],
+          ),
+          Padding(
+            padding: EdgeInsets.only(right: 20, left: 20),
+            child: Column(
+              children: [
+                SubcategoryProgressIndicator(
+                    description: Text("Needs"),
+                    percentage: Text("13%"),
+                    percentageValue: 0.13,
+                    color: Colors.green),
+                SubcategoryProgressIndicator(
+                    description: Text("Wants"),
+                    percentage: Text("67%"),
+                    percentageValue: 0.67,
+                    color: Colors.blue),
+                SubcategoryProgressIndicator(
+                    description: Text("Savings"),
+                    percentage: Text("20%"),
+                    percentageValue: 0.20,
+                    color: Colors.red),
+              ],
+            ),
+          ),
+          IncomeExpenseListView(
+            modelType: ExpenseModel.type,
+            expenseModels: buildExpenseModel(),
+          )
+        ])))
       ],
     );
   }
@@ -109,6 +106,7 @@ List<ExpenseModel> buildExpenseModel() {
 
   for (int i = 0; i < 5; i++) {
     expenseModel.add(ExpenseModel(
+        action: () {},
         isExpense: i / 2 == 0,
         itemDetails: "Saving test",
         itemDate: DateUtils.dateOnly(DateTime.now()).toString(),

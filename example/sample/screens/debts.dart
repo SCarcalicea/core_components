@@ -20,8 +20,7 @@ class _Debts extends State<Debts> {
       ],
       headerWidget: Container(
         color: Theme.of(context).primaryColor,
-        child:
-        RoundedRectangularButton(
+        child: RoundedRectangularButton(
           label: Text("Add Debt"),
           action: () {},
           icon: Icon(null),
@@ -31,14 +30,14 @@ class _Debts extends State<Debts> {
         Container(
             child: SingleChildScrollView(
                 child: Column(children: [
-                  InvestmentExpenseSummary(
-                      textStyle: TextStyle(fontSize: 10),
-                      valueStyle: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
-                      firstText: "Total Debt",
-                      firstValue: "3.5k \$",
-                      secondText: "Monthly Payments",
-                      secondValue: "5.2k \$"),
-                ]))),
+          InvestmentExpenseSummary(
+              textStyle: TextStyle(fontSize: 10),
+              valueStyle: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
+              firstText: "Total Debt",
+              firstValue: "3.5k \$",
+              secondText: "Monthly Payments",
+              secondValue: "5.2k \$"),
+        ]))),
         IncomeExpenseChart(
           pieChartSectionData: [
             PieChartSectionData(
@@ -54,7 +53,8 @@ class _Debts extends State<Debts> {
           ],
           pieChartSectionDetails: [
             ChartDetail(color: Colors.purple, text: "INCOME", isSquare: false),
-            ChartDetail(color: Colors.blueAccent, text: "DEBT", isSquare: false),
+            ChartDetail(
+                color: Colors.blueAccent, text: "DEBT", isSquare: false),
           ],
         ),
         Padding(
@@ -105,6 +105,7 @@ class _Debts extends State<Debts> {
 
     for (int i = 0; i < 5; i++) {
       investmentModel.add(InvestmentModel(
+          action: () {},
           itemTitle: "Binance",
           itemDetailsLine1: "Initial value: 1.24k \$",
           itemDetailsLine2: "Left to pay: 1.04k \$"));

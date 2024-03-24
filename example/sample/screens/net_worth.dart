@@ -9,7 +9,6 @@ class NetWorth extends StatefulWidget {
 }
 
 class _NetWorth extends State<NetWorth> {
-
   @override
   Widget build(BuildContext context) {
     return ScrollableScaffold(
@@ -23,14 +22,14 @@ class _NetWorth extends State<NetWorth> {
         Container(
             child: SingleChildScrollView(
                 child: Column(children: [
-                  InvestmentExpenseSummary(
-                      textStyle: TextStyle(fontSize: 10),
-                      valueStyle: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
-                      firstText: "Net Worth",
-                      firstValue: "1M \$",
-                      secondText: "Debts",
-                      secondValue: "500k \$"),
-                ]))),
+          InvestmentExpenseSummary(
+              textStyle: TextStyle(fontSize: 10),
+              valueStyle: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
+              firstText: "Net Worth",
+              firstValue: "1M \$",
+              secondText: "Debts",
+              secondValue: "500k \$"),
+        ]))),
         FireProgressIndicator(
             progressPercentageText: "Financial Independence Progress: 0.5",
             financialIndependenceProgress: 0.5),
@@ -57,6 +56,7 @@ class _NetWorth extends State<NetWorth> {
 
     for (int i = 0; i < 5; i++) {
       investmentModel.add(InvestmentModel(
+          action: () {},
           itemTitle: "Binance",
           itemDetailsLine1: "Initial value: 1.24k \$",
           itemDetailsLine2: "Left to pay: 1.04k \$"));
@@ -64,5 +64,4 @@ class _NetWorth extends State<NetWorth> {
 
     return investmentModel;
   }
-
 }

@@ -76,3 +76,8 @@
 ## 1.0.18
 
 - Adding the onTap capability to investment, expenses, debts and rounded_rectangular_button.
+
+## 1.0.19
+
+- BugFix for 1.0.18, we need for each element to be editable, not the entire list.
+
