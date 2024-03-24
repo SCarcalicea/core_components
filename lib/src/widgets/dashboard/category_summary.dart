@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 class CategorySummary extends StatelessWidget {
   final Icon icon;
   final String labelText;
-  final double value;
+  final String value;
   final String currency;
   final TextStyle? labelStyle;
   final TextStyle? valueStyle;

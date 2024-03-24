@@ -81,3 +81,6 @@
 
 - BugFix for 1.0.18, we need for each element to be editable, not the entire list.
 
+## 1.0.20
+
+- CategorySummary string for value instead of double.
