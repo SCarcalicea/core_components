@@ -72,3 +72,7 @@
 ## 1.0.17
 
 - OverallSummary supports string as arguments instead of double in order to display values and currency.
+
+## 1.0.18
+
+- Adding the onTap capability to investment, expenses, debts and rounded_rectangular_button.

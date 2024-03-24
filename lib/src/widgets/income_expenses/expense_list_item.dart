@@ -6,12 +6,14 @@ class ExpensesListItem extends StatelessWidget {
   final Widget itemDetails;
   final Widget itemDate;
   final String itemValue;
+  final VoidCallback action;
 
   const ExpensesListItem({
     required this.isExpense,
     required this.itemDetails,
     required this.itemDate,
     required this.itemValue,
+    required this.action,
   });
 
   @override
@@ -21,14 +23,13 @@ class ExpensesListItem extends StatelessWidget {
         isExpense ? Icons.paid_outlined : Icons.money_off,
         color: isExpense ? Colors.green : Colors.red,
       ),
+      onTap: action,
       title: itemDetails,
       subtitle: itemDate,
       trailing: Text(itemValue,
-      style: TextStyle(
-        fontWeight: FontWeight.bold,
-        color: isExpense ?
-            Colors.green : Colors.red
-      )),
+          style: TextStyle(
+              fontWeight: FontWeight.bold,
+              color: isExpense ? Colors.green : Colors.red)),
     );
   }
 }

@@ -21,7 +21,7 @@ class RoundedRectangularButton extends StatelessWidget {
           borderRadius: BorderRadius.circular(5.0),
         ),
       ),
-      onPressed: () {},
+      onPressed: action,
       icon: icon,
       label: label,
     );

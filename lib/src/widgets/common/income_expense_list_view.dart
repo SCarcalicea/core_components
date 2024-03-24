@@ -14,6 +14,7 @@ class IncomeExpenseListView extends StatelessWidget {
   final List<InvestmentModel>? investmentModels;
   final Color? itemColor;
   final double? elevation;
+  final VoidCallback action;
 
   const IncomeExpenseListView(
       {super.key,
@@ -22,7 +23,8 @@ class IncomeExpenseListView extends StatelessWidget {
       this.elevation = 20,
       this.expenseModels,
       this.investmentModels,
-      required this.modelType});
+      required this.modelType,
+      required this.action});
 
   @override
   Widget build(BuildContext context) {
@@ -44,6 +46,7 @@ class IncomeExpenseListView extends StatelessWidget {
                   elevation: elevation,
                   child: ExpensesListItem(
                       isExpense: model.isExpense,
+                      action: action,
                       itemDetails:
                           Text(model.itemDetails, style: model.titleStyle),
                       itemDate: Text(model.itemDate, style: model.detailsStyle),
@@ -56,6 +59,7 @@ class IncomeExpenseListView extends StatelessWidget {
                   elevation: elevation,
                   child: InvestmentListItem(
                     itemTitle: Text(model.itemTitle, style: model.titleStyle),
+                    action: action,
                     itemDetails2Lines: Column(
                       children: [
                         Text(model.itemDetailsLine1, style: model.detailsStyle),
