@@ -68,3 +68,7 @@
 ## 1.0.16
 
 - Add support for floating action button for ScrollableScaffold
+
+## 1.0.17
+
+- OverallSummary supports string as arguments instead of double in order to display values and currency.

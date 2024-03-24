@@ -4,9 +4,9 @@ import 'package:flutter/material.dart';
 /// You can define two styles which are divided amongst the 6 lines
 /// First line has the 'labelStyle', the second line has the 'valueStyle' and so on
 class OverallSummary extends StatelessWidget {
-  final double currentBalance;
-  final double fireAmount;
-  final double netWorth;
+  final String currentBalance;
+  final String fireAmount;
+  final String netWorth;
   final String currency;
   final TextStyle? labelStyle;
   final TextStyle? valueStyle;

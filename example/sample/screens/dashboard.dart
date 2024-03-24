@@ -34,9 +34,9 @@ class _Dashboard extends State<Dashboard> {
               child: Column(
                 children: [
                   SizedBox(height: 10),
-                  OverallSummary(currentBalance: 10000.0,
-                      fireAmount: 1000000.0,
-                      netWorth: 1000.0,
+                  OverallSummary(currentBalance: '10000.0',
+                      fireAmount: '1000000.0',
+                      netWorth: '1000.0',
                       currency: "\$",
                       currentBalanceLabel: "CURRENT BALANCE",
                       fireAmountLabel: "F.I.R.E AMOUNT",
