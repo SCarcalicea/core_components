@@ -38,11 +38,13 @@ class FireProgressIndicator extends StatelessWidget {
             ),
           ),
           SizedBox(height: margin),
-          Text(
-            progressPercentage,
-            style: textStyle,
-            textAlign: TextAlign.center,
-          ),
+          FittedBox(
+              fit: BoxFit.scaleDown,
+              child: Text(
+                progressPercentage,
+                style: textStyle,
+                textAlign: TextAlign.center,
+              )),
         ],
       ),
     );

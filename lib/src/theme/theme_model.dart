@@ -63,10 +63,10 @@ class ThemeModel extends ChangeNotifier {
         if (states.contains(MaterialState.selected)) {
           // Return selected text style
           return GoogleFonts.sourceCodePro(
-              fontSize: 12, fontWeight: FontWeight.bold);
+              fontSize: 10, fontWeight: FontWeight.bold);
         } else {
           // Return unselected text style
-          return GoogleFonts.sourceCodePro(fontSize: 12);
+          return GoogleFonts.sourceCodePro(fontSize: 10);
         }
       }),
     );

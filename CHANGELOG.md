@@ -84,3 +84,7 @@
 ## 1.0.20
 
 - CategorySummary string for value instead of double.
+
+## 1.0.21
+
+- Multiple fixes which covers the case where the text does not fit, it will scale down accordingly.

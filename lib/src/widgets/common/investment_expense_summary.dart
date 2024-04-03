@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 /// Summary for the current category
@@ -39,13 +40,22 @@ class _InvestmentExpenseSummaryState extends State<InvestmentExpenseSummary> {
       margin: EdgeInsets.only(top: widget.topMargin),
       child: Row(mainAxisAlignment: MainAxisAlignment.center, children: [
         Column(children: [
-          Text(widget.firstText, style: widget.textStyle),
-          Text(widget.firstValue, style: widget.valueStyle),
+          FittedBox(
+            fit: BoxFit.scaleDown,
+            child: Text(widget.firstText, style: widget.textStyle),
+          ),
+          FittedBox(
+              fit: BoxFit.scaleDown,
+              child: Text(widget.firstValue, style: widget.valueStyle)),
         ]),
         SizedBox(width: widget.gapSize),
         Column(children: [
-          Text(widget.secondText, style: widget.textStyle),
-          Text(widget.secondValue, style: widget.valueStyle),
+          FittedBox(
+              fit: BoxFit.scaleDown,
+              child: Text(widget.secondText, style: widget.textStyle)),
+          FittedBox(
+              fit: BoxFit.scaleDown,
+              child: Text(widget.secondValue, style: widget.valueStyle)),
         ])
       ]),
     );

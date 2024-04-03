@@ -13,7 +13,7 @@ export 'src/widgets/common/app_bar/app_bar_factory.dart' show AppBarFactory;
 export 'src/widgets/common/app_bar/app_bar_model.dart' show AppBarModel;
 export 'src/widgets/common/buttons/filter_by_period_buttons.dart' show FilterByPeriodButtons;
 export 'src/widgets/common/chat/chart_detail.dart' show ChartDetail;
-export 'src/widgets/common/progress_indicator/fire_progress_indicatr.dart'
+export 'src/widgets/common/progress_indicator/fire_progress_indicator.dart'
     show FireProgressIndicator;
 export 'src/widgets/common/buttons/rounded_rectangular_button.dart'
     show RoundedRectangularButton;

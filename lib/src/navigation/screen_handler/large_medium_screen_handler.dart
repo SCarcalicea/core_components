@@ -53,8 +53,10 @@ class _LargeMediumScreenHandlerState extends State<LargeMediumScreenHandler> {
       destinations: widget.destinations.map(
         (PageDestinationModel destination) {
           return NavigationRailDestination(
-            label: Text(destination.label,
-                style: Theme.of(context).textTheme.labelLarge),
+            label: FittedBox(
+                fit: BoxFit.scaleDown,
+                child: Text(destination.label,
+                    style: Theme.of(context).textTheme.labelLarge)),
             icon: destination.icon,
             selectedIcon: destination.selectedIcon,
           );
