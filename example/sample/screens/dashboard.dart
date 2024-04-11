@@ -1,6 +1,8 @@
 import 'package:fire_core_components/fire_core_components.dart';
 import 'package:flutter/material.dart';
 
+import '../expanded_body_view.dart';
+
 class Dashboard extends StatefulWidget {
   Dashboard({super.key});
 
@@ -17,6 +19,7 @@ class _Dashboard extends State<Dashboard> {
         actions: [
           IconButton(onPressed: () {}, icon: const Icon(Icons.settings)),
         ],
+        expandedBody: const ExpandedBodyView(),
         headerWidget: Container(color: Theme.of(context).primaryColor),
         bottomBarWidget: FilterByPeriodButtons(
           height: 30,

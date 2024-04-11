@@ -1,6 +1,6 @@
 name: fire_core_components
-description: A simple way of managing multiple screen sizes, you just need to provide a PageContentBuilder implementation and a list of PageDestinationModel
-version: 1.0.21
+description: A simple way of managing multiple screen sizes, you just need to provide a PageContentBuilder implementation and a list of PageDestinationModel and the application will automatically adjust to any screen size. For very small screen sizes wrap the widget into a FittedBox widget and set git to BoxFit.scaleDown and the app will adapt even better.
+version: 1.0.22
 repository: https://github.com/SCarcalicea/core_components
 issue_tracker: https://github.com/SCarcalicea/core_components/issues
 

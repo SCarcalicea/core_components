@@ -8,6 +8,7 @@ class ScrollableScaffold extends StatefulWidget {
   final Widget? leading;
   final Widget? bottomBarWidget;
   final Widget? floatingActionButton;
+  final Widget? expandedBody;
   final List<Widget>? actions;
   final Widget? headerWidget;
   final double headerExpandedHeight;
@@ -19,6 +20,7 @@ class ScrollableScaffold extends StatefulWidget {
       {this.leading,
       this.bottomBarWidget,
       this.floatingActionButton,
+      this.expandedBody,
       this.actions,
       this.headerWidget,
       this.headerExpandedHeight = 0.18,
@@ -35,6 +37,7 @@ class _ScrollableScaffold extends State<ScrollableScaffold> {
   Widget build(BuildContext context) {
     return DraggableHome(
       centerTitle: true,
+      expandedBody: widget.expandedBody,
       alwaysShowLeadingAndAction: true,
       alwaysShowTitle: true,
       fullyStretchable: true,

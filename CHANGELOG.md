@@ -88,3 +88,7 @@
 ## 1.0.21
 
 - Multiple fixes which covers the case where the text does not fit, it will scale down accordingly.
+
+## 1.0.22
+
+- Add support for the widget that is displayed whe the user scrolls down all the content, on ScrollableScaffold set expandedBody property with whatever widgets you want to display..
