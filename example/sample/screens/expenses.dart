@@ -7,7 +7,9 @@ import 'package:fire_core_components/src/widgets/common/progress_indicator/subca
 import 'package:fire_core_components/src/widgets/common/scrollable_scaffold.dart';
 import 'package:fire_core_components/src/widgets/income_expenses/expense_model.dart';
 import 'package:fl_chart/fl_chart.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 
 class Expenses extends StatefulWidget {
   const Expenses({super.key});
@@ -38,6 +40,7 @@ class _Expenses extends State<Expenses> {
       body: [
         Container(
             child: SingleChildScrollView(
+              physics: const NeverScrollableScrollPhysics(),
                 child: Column(children: [
           InvestmentExpenseSummary(
               textStyle: TextStyle(fontSize: 10),
